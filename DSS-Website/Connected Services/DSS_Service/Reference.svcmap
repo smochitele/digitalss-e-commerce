@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="7c1e327b-1864-460f-b490-798b32231e43" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:65458/DSSWebService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="DSSWebService.xsd" MetadataType="Schema" ID="88f78b7b-dbd9-4505-b82c-22b62286d625" SourceId="1" SourceUrl="http://localhost:65458/DSSWebService.svc?xsd=xsd1" />
+    <MetadataFile FileName="DSSWebService.disco" MetadataType="Disco" ID="6b782af6-fcc9-4bf4-9743-9d952881bb4c" SourceId="1" SourceUrl="http://localhost:65458/DSSWebService.svc?disco" />
+    <MetadataFile FileName="DSSWebService.wsdl" MetadataType="Wsdl" ID="fb2115ca-a2d6-4487-9e88-50b794db8906" SourceId="1" SourceUrl="http://localhost:65458/DSSWebService.svc?wsdl" />
+    <MetadataFile FileName="DSSWebService1.xsd" MetadataType="Schema" ID="1f0f7ed6-0426-4b3d-85c0-ca20a1f9f2f6" SourceId="1" SourceUrl="http://localhost:65458/DSSWebService.svc?xsd=xsd0" />
+    <MetadataFile FileName="DSSWebService2.xsd" MetadataType="Schema" ID="6ee82c55-24bf-4aee-be13-aa0b0ccd7598" SourceId="1" SourceUrl="http://localhost:65458/DSSWebService.svc?xsd=xsd3" />
+    <MetadataFile FileName="DSSWebService3.xsd" MetadataType="Schema" ID="aeac15b4-2c16-433b-9c54-e7bf1512941b" SourceId="1" SourceUrl="http://localhost:65458/DSSWebService.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

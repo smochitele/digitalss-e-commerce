@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway|Red+Hat+Text|Roboto|Source+Serif+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Asap&display=swap');
+* {
+    line-height: 1.7;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    background: rgba(255, 255, 255, 0);
+    scroll-behavior: smooth;
+}
+
+#info {
+    font-weight: 700;
+    color: rgb(1, 107, 72);
+}
+
+.fa-chart-pie {
+    color: rgb(5, 5, 182);
+}
+
+.fa-coins {
+    color: brown;
+}
+
+.fa-credit-card {
+    color: rgb(156, 43, 43);
+}
+
+
+/* In addition to the styling in the ../css/admin.css */
+
+.user-left {
+    color: #fff;
+    width: 40%;
+    height: 100vh;
+    float: left;
+    padding-top: 100px;
+}
+
+.user-left .user-card {
+    padding: 50px 0px;
+    text-align: center;
+    border-radius: 5px;
+    color: rgb(39, 133, 10);
+    box-shadow: 0px 1px 2px 1px rgba(44, 138, 105, 0.479);
+}
+
+.user-card hr {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.user-card h3 {
+    padding: 5px 0;
+    color: rgb(39, 133, 10);
+    font-weight: lighter;
+}
+
+.user-card h5 {
+    font-weight: lighter;
+    font-size: 16px;
+}
+
+.user-card p {
+    font-size: 14px;
+    color: rgb(3, 122, 83);
+}
+
+.user-card h6 {
+    color: rgb(0, 15, 10);
+}
+
+.user-card img {
+    width: 80px;
+    height: 80px;
+}
+
+
+/* The right side of things */
+
+.user-right {
+    width: 60%;
+    padding-top: 100px;
+    height: 100vh;
+    float: right;
+    text-align: center;
+    /* border: 1px solid rgb(2, 54, 36); */
+}
+
+.user-options {
+    margin: 0 9px;
+    border-radius: 5px;
+    box-shadow: 0px 1px 2px 1px rgba(44, 138, 105, 0.479);
+}
+
+.taps-buttons {
+    text-align: left;
+    /* background: rgb(64, 187, 146); */
+}
+
+.taps-buttons button {
+    color: rgb(39, 133, 10);
+    font-weight: 800;
+    padding: 0 12px;
+    /* !important;*/
+    border: none;
+    background: inherit;
+    /* border-right: 1px solid rgb(2, 54, 36); */
+}
+
+.taps-buttons button:focus {
+    border: 1px solid rgb(33, 155, 112);
+    ;
+    outline: none;
+    border-radius: 3px;
+    color: #fff;
+    background: rgb(39, 133, 10);
+}
+
+
+/* The div that contains the settings for the user - for updating the profile */
+
+.user-info {
+    padding: 10px;
+    text-align: center;
+}
+
+.input-info label {
+    width: 90%;
+    text-align: left;
+    font-weight: lighter;
+}
+
+.input-info {
+    margin: 6px 0;
+}
+
+.input-info input[type="password"],
+.input-info input[type="text"],
+.input-info textarea,
+.input-info input[type="email"] {
+    border-radius: 5px;
+    border: 1.2px solid rgb(39, 133, 10);
+    height: 40px;
+    width: 90%;
+    display: block;
+    outline: none;
+    font-size: 17px;
+    padding: 0 10px;
+    margin: 0 auto;
+    /* text-align: center; */
+}
+
+.input-info button {
+    background: rgb(39, 133, 10);
+    color: #fff;
+    border: none;
+    text-transform: uppercase;
+    text-align: center;
+    width: 90%;
+    border-radius: 5px;
+    transition: background 1s ease-in;
+}
+
+.input-info textarea {
+    height: 180px;
+    resize: none;
+}
+
+#transactions, #wishlist {
+    height: 59vh;
+    overflow-y: scroll;
+    scroll-margin: inherit;
+}

@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway|Red+Hat+Text|Roboto|Source+Serif+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Asap&display=swap');
+* {
+    line-height: 1.7;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    background: rgba(255, 255, 255, 0);
+    scroll-behavior: smooth;
+}
+
+
+/* Global Styling */
+
+.media {
+    padding: 20px;
+    display: block;
+    font-weight: lighter;
+    text-align: center;
+}
+
+.media h5 {
+    font-weight: lighter;
+    text-transform: capitalize;
+}
+
+.fab {
+    font-size: 35px;
+    margin: 0 5px;
+}
+
+.fa-facebook {
+    color: #2f55a4;
+}
+
+.fa-google-plus {
+    color: #cc3333;
+}
+
+.fa-facebook:hover {
+    color: #173b88;
+}
+
+.fa-google-plus:hover {
+    color: #a81212;
+}
+
+.message-form {
+    margin-top: 70px !important;
+    padding: 30px !important;
+    width: 100%;
+    height: 100%;
+}
+
+.register-form,
+.adding {
+    margin-top: 110px !important;
+    padding: 30px !important;
+}
+
+.login-form {
+    margin-top: 200px !important;
+}
+
+.contact_us img {
+    height: 100vh;
+    width: 100%;
+}
+
+.input-login label,
+.input-register label {
+    padding: 0 !important;
+    font-weight: lighter;
+    text-transform: capitalize;
+    display: inline;
+    font-size: 15px;
+    text-align: left !important;
+}
+
+.login-form,
+.register-form {
+    width: 35%;
+    min-height: 45vh !important;
+    background: #fff;
+    border-radius: 7px;
+    padding: 30px 30px 0px 30px;
+    box-shadow: 0 1.5px 1.5px rgba(0, 29, 19, 0.507);
+    /* text-align: center; */
+}
+
+#register {
+    font-weight: lighter;
+    text-align: right !important;
+    font-size: 13px;
+    /* color: rgb(33, 155, 112); */
+}
+
+.input-login input[type="text"],
+.input-login input[type="password"],
+.input-register input[type="text"],
+.input-register input[type="number"],
+.input-register input[type="password"],
+.input-register input[type="email"],
+.input-register textarea {
+    padding: 8px;
+    width: 100%;
+    margin: 1px;
+    border-radius: 5px;
+    margin: 4px 0;
+    outline: none;
+    border: none;
+    border: 1.5px solid rgb(39, 133, 10);
+}
+
+.input-login input[type="submit"],
+.input-register input[type="submit"] {
+    background: rgb(39, 133, 10);
+    color: #fff;
+    border: none;
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+    border-radius: 5px;
+    padding: 12px 25px !important;
+    transition: background 1s ease-in;
+}
+
+.input-login input[type="submit"]:hover,
+.input-register input[type="submit"]:hover {
+    background: rgb(31, 104, 8);
+    transition: background 1s ease-in;
+}
+
+.input-register textarea {
+    height: 170px;
+    resize: none;
+}
+
+.login-bg {
+    height: 100vh !important;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background: linear-gradient(to bottom, rgba(114, 237, 194, 0.973) 0%, rgba(7, 139, 93, 0.966) 75%, rgba(7, 139, 93, 0.918) 100%), url("../images/fast.jpg");
+}
+
+.register-bg {
+    height: 100vh !important;
+    display: block;
+    background: #fff;
+}

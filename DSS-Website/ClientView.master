@@ -1,0 +1,46 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/RootLayout.Master" AutoEventWireup="true" CodeBehind="ClientView.master.cs" Inherits="DSS_Website.ClientView" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
+    Management | DigitalSS
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="head" runat="server">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <script src="../script/scripts.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="body" runat="server">
+  <div class="our-container">
+      <br />
+       <div class="menu-bar" id="slide">
+        <h2>Store Management</h2>
+        <div class="menu" id="sde">
+            <ul>
+                <li><a href="Dashboard.aspx"><i class="fas fa-chart-line"></i>Dashboard</a></li>
+            </ul>
+            <ul>
+                <li><a href="ProductsAvailable.aspx"><i class="fas fa-shopping-basket"></i>Products</a></li>
+            </ul>
+            <ul>
+                <li><a href="Customers.aspx"><i class="fas fa-user"></i>Customers</a></li>
+            </ul>
+            <ul>
+                <li><a href="Invoices.aspx"><i class="fas fa-paste"></i>Invoices</a></li>
+            </ul>
+            <ul>
+                <li><a href="Reports.aspx"><i class="fas fa-database"></i>Reports</a></li>
+            </ul>
+        </div>
+    </div>
+   <div class="data-bar" id="databar" style="position: absolute;">
+       <div class="container">
+            <asp:ContentPlaceHolder ID="data" runat="server">
+
+            </asp:ContentPlaceHolder>
+     </div>
+   </div>
+   </div>
+</asp:Content>

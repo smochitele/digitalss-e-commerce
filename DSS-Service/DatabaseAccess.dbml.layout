@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 12.125" name="DatabaseAccess">
+  <DataContextMoniker Name="/DatabaseAccessDataContext" />
+  <nestedChildShapes>
+    <classShape Id="479dcfea-d684-41a8-b38b-e1dcb9f392a1" absoluteBounds="6.75, 7.75, 2, 1.3862939453124996">
+      <DataClassMoniker Name="/DatabaseAccessDataContext/CommonType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7df9459a-59b4-42f8-adda-b5838b39768d" absoluteBounds="6.765, 8.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4b3258c1-16d5-49e5-b859-84499e91485b" absoluteBounds="3.5, 5.25, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/DatabaseAccessDataContext/Order" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2622736f-1d61-4bfd-a983-2ac88ccbd942" absoluteBounds="3.515, 5.71, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="68eb6156-e99e-4020-b412-c627a8ac0eac" absoluteBounds="6.25, 5.625, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/DatabaseAccessDataContext/OrderProductJoin" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8145e1fe-1ed7-483c-b828-6ce4cc6163b4" absoluteBounds="6.265, 6.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="54c3f60b-49e3-4789-8f7f-4e4e0a8d4225" absoluteBounds="3.5, 8.125, 2, 3.6939111328124987">
+      <DataClassMoniker Name="/DatabaseAccessDataContext/Product" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c9d36677-70e8-4b18-ad62-047ce45a3763" absoluteBounds="3.515, 8.585, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6402117e-b026-480d-808d-9e54b9a64ecf" absoluteBounds="3.5, 3.125, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/DatabaseAccessDataContext/Transaction" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bf78ad04-9847-40bb-b857-76efce284b77" absoluteBounds="3.515, 3.585, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="dfc94a68-5afe-4a97-843a-77c44f9f25e1" absoluteBounds="6.25, 3.125, 2, 1.1939925130208331">
+      <DataClassMoniker Name="/DatabaseAccessDataContext/TransactionProductJoin" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b83ce51f-66af-4c30-bf62-026105ab0be2" absoluteBounds="6.265, 3.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b9689a05-374c-4199-9b52-32b019bdeecb" absoluteBounds="0.75, 2.875, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/DatabaseAccessDataContext/User" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c197d5d6-2fc7-4a48-ac90-69109b4e7875" absoluteBounds="0.765, 3.335, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ddac0ea9-e15b-41d1-911b-02f7e536172a" absoluteBounds="3.5, 1.125, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/DatabaseAccessDataContext/Wishlist" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cd3716c7-1ae1-4e1d-bdaa-0dd92a5af55a" absoluteBounds="3.515, 1.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="bc31e15d-0c25-4caf-b308-f1e85d4e8c47" absoluteBounds="6.25, 1.125, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/DatabaseAccessDataContext/WishlistProductJoin" />
+      <nestedChildShapes>
+        <elementListCompartment Id="aa8ed76b-4a5e-4151-959e-930b6e987f5c" absoluteBounds="6.265, 1.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 6.31814697265625); (5.79166666666667 : 6.31814697265625 : JumpStart); (5.95833333333333 : 6.31814697265625 : JumpEnd); (5.97916666666667 : 6.31814697265625 : JumpStart); (6.14583333333333 : 6.31814697265625 : JumpEnd); (6.25 : 6.31814697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DatabaseAccessDataContext/Order/Order_OrderProductJoin" />
+      <nodes>
+        <classShapeMoniker Id="4b3258c1-16d5-49e5-b859-84499e91485b" />
+        <classShapeMoniker Id="68eb6156-e99e-4020-b412-c627a8ac0eac" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 10.5088525390625); (6.46875 : 10.5088525390625); (6.46875 : 7.0112939453125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DatabaseAccessDataContext/Product/Product_OrderProductJoin" />
+      <nodes>
+        <classShapeMoniker Id="54c3f60b-49e3-4789-8f7f-4e4e0a8d4225" />
+        <classShapeMoniker Id="68eb6156-e99e-4020-b412-c627a8ac0eac" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 8.22038361538462); (6.0625 : 7.65788361538462); (6.0625 : 3.72199625651042); (6.25 : 3.72199625651042)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DatabaseAccessDataContext/Product/Product_TransactionProductJoin" />
+      <nodes>
+        <classShapeMoniker Id="54c3f60b-49e3-4789-8f7f-4e4e0a8d4225" />
+        <classShapeMoniker Id="dfc94a68-5afe-4a97-843a-77c44f9f25e1" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 3.36099812825521); (5.79166666666667 : 3.36099812825521 : JumpStart); (5.95833333333333 : 3.36099812825521 : JumpEnd); (6.25 : 3.36099812825521)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DatabaseAccessDataContext/Transaction/Transaction_TransactionProductJoin" />
+      <nodes>
+        <classShapeMoniker Id="6402117e-b026-480d-808d-9e54b9a64ecf" />
+        <classShapeMoniker Id="dfc94a68-5afe-4a97-843a-77c44f9f25e1" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 5.60740397135417); (1.75 : 6.50645232291667); (3.5 : 6.50645232291667)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DatabaseAccessDataContext/User/User_Order" />
+      <nodes>
+        <classShapeMoniker Id="b9689a05-374c-4199-9b52-32b019bdeecb" />
+        <classShapeMoniker Id="4b3258c1-16d5-49e5-b859-84499e91485b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 3.81814697265625); (3.5 : 3.81814697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DatabaseAccessDataContext/User/User_Transaction" />
+      <nodes>
+        <classShapeMoniker Id="b9689a05-374c-4199-9b52-32b019bdeecb" />
+        <classShapeMoniker Id="6402117e-b026-480d-808d-9e54b9a64ecf" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 2.875); (1.75 : 1.72199625651042); (3.5 : 1.72199625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DatabaseAccessDataContext/User/User_Wishlist" />
+      <nodes>
+        <classShapeMoniker Id="b9689a05-374c-4199-9b52-32b019bdeecb" />
+        <classShapeMoniker Id="ddac0ea9-e15b-41d1-911b-02f7e536172a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.46769230769231 : 8.125); (5.875 : 7.71769230769231); (5.875 : 1.72199625651042); (6.25 : 1.72199625651042)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DatabaseAccessDataContext/Product/Product_WishlistProductJoin" />
+      <nodes>
+        <classShapeMoniker Id="54c3f60b-49e3-4789-8f7f-4e4e0a8d4225" />
+        <classShapeMoniker Id="bc31e15d-0c25-4caf-b308-f1e85d4e8c47" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 1.36099812825521); (6.25 : 1.36099812825521)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DatabaseAccessDataContext/Wishlist/Wishlist_WishlistProductJoin" />
+      <nodes>
+        <classShapeMoniker Id="ddac0ea9-e15b-41d1-911b-02f7e536172a" />
+        <classShapeMoniker Id="bc31e15d-0c25-4caf-b308-f1e85d4e8c47" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

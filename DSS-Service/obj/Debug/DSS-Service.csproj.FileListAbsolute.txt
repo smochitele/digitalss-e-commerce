@@ -1,0 +1,7 @@
+C:\Users\user\Documents\IFM2B_G02\DSS-Service\bin\DSS-Service.dll.config
+C:\Users\user\Documents\IFM2B_G02\DSS-Service\bin\DSS-Service.dll
+C:\Users\user\Documents\IFM2B_G02\DSS-Service\bin\DSS-Service.pdb
+C:\Users\user\Documents\IFM2B_G02\DSS-Service\obj\Debug\DSS-Service.csprojAssemblyReference.cache
+C:\Users\user\Documents\IFM2B_G02\DSS-Service\obj\Debug\DSS-Service.csproj.CoreCompileInputs.cache
+C:\Users\user\Documents\IFM2B_G02\DSS-Service\obj\Debug\DSS-Service.dll
+C:\Users\user\Documents\IFM2B_G02\DSS-Service\obj\Debug\DSS-Service.pdb

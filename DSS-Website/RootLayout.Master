@@ -1,0 +1,117 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="RootLayout.master.cs" Inherits="DSS_Website.RootLayout" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>
+        <asp:ContentPlaceHolder ID="title" runat="server">
+
+        </asp:ContentPlaceHolder>
+    </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/imagehover.min.css">
+    <link href="favicon.ico" rel="shortcut ico" type="image/x-ico" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="../script/scripts.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+<header id="myHeader" class="shadow-sm">
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="Home.aspx"><img src="images/logo1.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="Home.aspx">Home<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Catalog.aspx">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="AboutUs.aspx">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ContactUs.aspx">Contact Us</a>
+                    </li>
+                    <li class="nav-item" id="management" runat="server">
+                        <a class="nav-link" href="Dashboard.aspx">Store Management</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <form class="form-inline">
+                        <input class="form-control mr-sm-2 form-search" type="search" onsearch="search();" aria-label="Search" placeholder="Search our store" id="txtSearch">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="reset" id="btnSearch" onclick="search();"><i class="fas fa-search"></i></button>
+                    </form>
+                    <li class="nav-item">
+                        <a class="nav-link dropmenu" href="Login.aspx" id="lblLogin" runat="server">Login</a>
+                       <%-- <div class="dropitems">
+                            <a href="Profile.aspx">PROFILE</a>
+                            <a href="Signout.aspx">SIGN OUT</a>
+                        </div>--%>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i onclick="openCart();" class="fa fa-shopping-cart" aria-hidden="true"></i> </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="cart" id="cart" runat="server">
+        <h5 class="text-center">My Shopping Cart</h5>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeCart()">&times;</a>
+
+        <!-- The list of items in the cart starts here -->
+        <div class="cart-item" id="items" runat="server">
+
+        </div>
+
+        <hr>
+        <br>
+        <br>
+        <br>
+        <div class="cart-checkout">
+            <h5 class="" id="cartTotal" runat="server">Total: <strong></strong></h5>
+            <button class="cart-btn" onclick="checkOut();"><i class="fas fa-shopping-basket"></i>Checkout</button>
+        </div>
+    </div>
+    <div>
+        <asp:ContentPlaceHolder ID="body" runat="server">
+
+        </asp:ContentPlaceHolder>
+    </div>
+    
+    <div>
+            <footer id="myFooter">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <p>Copyright &copy 2019</p>
+                    <p> | </p>
+                    <p>DigitalSS</p>
+                    <p> | </p>
+                    <p>Rights Reserved</p>
+                </div>
+                <div class="col-md-4">
+                    <p>Privacy Policy</p>
+                    <p> | </p>
+                    <p>Cookies Use</p>
+                    <p> | </p>
+                    <p><a href="ContactUs.aspx">Contact Us</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </div>
+</body>
+
+</html>
+

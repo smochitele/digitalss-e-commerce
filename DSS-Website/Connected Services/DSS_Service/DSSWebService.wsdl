@@ -1,0 +1,990 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="DSSWebService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:65458/DSSWebService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:65458/DSSWebService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:65458/DSSWebService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/DSS_Service" />
+      <xsd:import schemaLocation="http://localhost:65458/DSSWebService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IDSSWebService_GetUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUser" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_GetUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_GetUserByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByID" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_GetUserByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_GetAllProducts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllProducts" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_GetAllProducts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllProductsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_GetProducts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProducts" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_GetProducts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_GetAllUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllUsers" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_GetAllUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_Search_InputMessage">
+    <wsdl:part name="parameters" element="tns:Search" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_Search_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_AddUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddUser" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_AddUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_RemoveUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveUser" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_RemoveUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_DisableUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:DisableUser" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_DisableUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DisableUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_EnableUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:EnableUser" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_EnableUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EnableUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_EditUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditUser" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_EditUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_AddProduct_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddProduct" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_AddProduct_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_RemoveProduct_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveProduct" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_RemoveProduct_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_EditProduct_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditProduct" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_EditProduct_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_DisableProduct_InputMessage">
+    <wsdl:part name="parameters" element="tns:DisableProduct" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_DisableProduct_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DisableProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_EnableProduct_InputMessage">
+    <wsdl:part name="parameters" element="tns:EnableProduct" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_EnableProduct_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EnableProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_GetProduct_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProduct" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_GetProduct_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_MostSellingProduct_InputMessage">
+    <wsdl:part name="parameters" element="tns:MostSellingProduct" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_MostSellingProduct_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MostSellingProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_LeastSellingProduct_InputMessage">
+    <wsdl:part name="parameters" element="tns:LeastSellingProduct" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_LeastSellingProduct_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LeastSellingProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_OverallMostSellingProduct_InputMessage">
+    <wsdl:part name="parameters" element="tns:OverallMostSellingProduct" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_OverallMostSellingProduct_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OverallMostSellingProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_OverallLeastSellingProduct_InputMessage">
+    <wsdl:part name="parameters" element="tns:OverallLeastSellingProduct" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_OverallLeastSellingProduct_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OverallLeastSellingProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_GetTax_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTax" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_GetTax_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTaxResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_SetTax_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetTax" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_SetTax_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetTaxResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_Transact_InputMessage">
+    <wsdl:part name="parameters" element="tns:Transact" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_Transact_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TransactResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_ChangeUserPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeUserPassword" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_ChangeUserPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeUserPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_GetPointsDiscount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPointsDiscount" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_GetPointsDiscount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPointsDiscountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_GetAllOrders_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllOrders" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_GetAllOrders_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllOrdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_GetUserOrders_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserOrders" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_GetUserOrders_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserOrdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_GetOrderItems_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderItems" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_GetOrderItems_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_GetCategoryPerfomance_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCategoryPerfomance" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_GetCategoryPerfomance_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCategoryPerfomanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_GetWorstBuyer_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorstBuyer" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_GetWorstBuyer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorstBuyerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_GetBestBuyer_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBestBuyer" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_GetBestBuyer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBestBuyerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_GetNumberOfSales_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNumberOfSales" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_GetNumberOfSales_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNumberOfSalesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_SalesContribution_InputMessage">
+    <wsdl:part name="parameters" element="tns:SalesContribution" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_SalesContribution_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SalesContributionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_RevenuePerTransaction_InputMessage">
+    <wsdl:part name="parameters" element="tns:RevenuePerTransaction" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_RevenuePerTransaction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RevenuePerTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_GetRevenue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRevenue" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_GetRevenue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRevenueResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_GetTotalOrders_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTotalOrders" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_GetTotalOrders_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTotalOrdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_GetTotalUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTotalUsers" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_GetTotalUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTotalUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_TopFiveSelling_InputMessage">
+    <wsdl:part name="parameters" element="tns:TopFiveSelling" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_TopFiveSelling_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TopFiveSellingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_SortByPriceAsc_InputMessage">
+    <wsdl:part name="parameters" element="tns:SortByPriceAsc" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_SortByPriceAsc_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SortByPriceAscResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_SortByPriceADesc_InputMessage">
+    <wsdl:part name="parameters" element="tns:SortByPriceADesc" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_SortByPriceADesc_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SortByPriceADescResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_SortByNameAZ_InputMessage">
+    <wsdl:part name="parameters" element="tns:SortByNameAZ" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_SortByNameAZ_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SortByNameAZResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_SortByNameZA_InputMessage">
+    <wsdl:part name="parameters" element="tns:SortByNameZA" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_SortByNameZA_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SortByNameZAResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_AverageUsersPerDay_InputMessage">
+    <wsdl:part name="parameters" element="tns:AverageUsersPerDay" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_AverageUsersPerDay_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AverageUsersPerDayResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_FilterOrders_InputMessage">
+    <wsdl:part name="parameters" element="tns:FilterOrders" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_FilterOrders_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FilterOrdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_FilterRevenue_InputMessage">
+    <wsdl:part name="parameters" element="tns:FilterRevenue" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_FilterRevenue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FilterRevenueResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_GetFilteredOrders_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFilteredOrders" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_GetFilteredOrders_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFilteredOrdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_AddToWishList_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddToWishList" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_AddToWishList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddToWishListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_GetUserWishlist_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserWishlist" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_GetUserWishlist_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserWishlistResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_TopFiveMostWishedItems_InputMessage">
+    <wsdl:part name="parameters" element="tns:TopFiveMostWishedItems" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_TopFiveMostWishedItems_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TopFiveMostWishedItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_GetProspectiveBuyers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProspectiveBuyers" />
+  </wsdl:message>
+  <wsdl:message name="IDSSWebService_GetProspectiveBuyers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProspectiveBuyersResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IDSSWebService">
+    <wsdl:operation name="GetUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDSSWebService/GetUser" message="tns:IDSSWebService_GetUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDSSWebService/GetUserResponse" message="tns:IDSSWebService_GetUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDSSWebService/GetUserByID" message="tns:IDSSWebService_GetUserByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDSSWebService/GetUserByIDResponse" message="tns:IDSSWebService_GetUserByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllProducts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDSSWebService/GetAllProducts" message="tns:IDSSWebService_GetAllProducts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDSSWebService/GetAllProductsResponse" message="tns:IDSSWebService_GetAllProducts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProducts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDSSWebService/GetProducts" message="tns:IDSSWebService_GetProducts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDSSWebService/GetProductsResponse" message="tns:IDSSWebService_GetProducts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllUsers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDSSWebService/GetAllUsers" message="tns:IDSSWebService_GetAllUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDSSWebService/GetAllUsersResponse" message="tns:IDSSWebService_GetAllUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Search">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDSSWebService/Search" message="tns:IDSSWebService_Search_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDSSWebService/SearchResponse" message="tns:IDSSWebService_Search_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDSSWebService/AddUser" message="tns:IDSSWebService_AddUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDSSWebService/AddUserResponse" message="tns:IDSSWebService_AddUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDSSWebService/RemoveUser" message="tns:IDSSWebService_RemoveUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDSSWebService/RemoveUserResponse" message="tns:IDSSWebService_RemoveUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DisableUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDSSWebService/DisableUser" message="tns:IDSSWebService_DisableUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDSSWebService/DisableUserResponse" message="tns:IDSSWebService_DisableUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EnableUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDSSWebService/EnableUser" message="tns:IDSSWebService_EnableUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDSSWebService/EnableUserResponse" message="tns:IDSSWebService_EnableUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDSSWebService/EditUser" message="tns:IDSSWebService_EditUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDSSWebService/EditUserResponse" message="tns:IDSSWebService_EditUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddProduct">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDSSWebService/AddProduct" message="tns:IDSSWebService_AddProduct_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDSSWebService/AddProductResponse" message="tns:IDSSWebService_AddProduct_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveProduct">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDSSWebService/RemoveProduct" message="tns:IDSSWebService_RemoveProduct_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDSSWebService/RemoveProductResponse" message="tns:IDSSWebService_RemoveProduct_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditProduct">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDSSWebService/EditProduct" message="tns:IDSSWebService_EditProduct_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDSSWebService/EditProductResponse" message="tns:IDSSWebService_EditProduct_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DisableProduct">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDSSWebService/DisableProduct" message="tns:IDSSWebService_DisableProduct_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDSSWebService/DisableProductResponse" message="tns:IDSSWebService_DisableProduct_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EnableProduct">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDSSWebService/EnableProduct" message="tns:IDSSWebService_EnableProduct_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDSSWebService/EnableProductResponse" message="tns:IDSSWebService_EnableProduct_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProduct">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDSSWebService/GetProduct" message="tns:IDSSWebService_GetProduct_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDSSWebService/GetProductResponse" message="tns:IDSSWebService_GetProduct_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MostSellingProduct">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDSSWebService/MostSellingProduct" message="tns:IDSSWebService_MostSellingProduct_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDSSWebService/MostSellingProductResponse" message="tns:IDSSWebService_MostSellingProduct_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LeastSellingProduct">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDSSWebService/LeastSellingProduct" message="tns:IDSSWebService_LeastSellingProduct_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDSSWebService/LeastSellingProductResponse" message="tns:IDSSWebService_LeastSellingProduct_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OverallMostSellingProduct">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDSSWebService/OverallMostSellingProduct" message="tns:IDSSWebService_OverallMostSellingProduct_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDSSWebService/OverallMostSellingProductResponse" message="tns:IDSSWebService_OverallMostSellingProduct_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OverallLeastSellingProduct">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDSSWebService/OverallLeastSellingProduct" message="tns:IDSSWebService_OverallLeastSellingProduct_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDSSWebService/OverallLeastSellingProductResponse" message="tns:IDSSWebService_OverallLeastSellingProduct_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTax">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDSSWebService/GetTax" message="tns:IDSSWebService_GetTax_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDSSWebService/GetTaxResponse" message="tns:IDSSWebService_GetTax_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetTax">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDSSWebService/SetTax" message="tns:IDSSWebService_SetTax_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDSSWebService/SetTaxResponse" message="tns:IDSSWebService_SetTax_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Transact">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDSSWebService/Transact" message="tns:IDSSWebService_Transact_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDSSWebService/TransactResponse" message="tns:IDSSWebService_Transact_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeUserPassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDSSWebService/ChangeUserPassword" message="tns:IDSSWebService_ChangeUserPassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDSSWebService/ChangeUserPasswordResponse" message="tns:IDSSWebService_ChangeUserPassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPointsDiscount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDSSWebService/GetPointsDiscount" message="tns:IDSSWebService_GetPointsDiscount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDSSWebService/GetPointsDiscountResponse" message="tns:IDSSWebService_GetPointsDiscount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllOrders">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDSSWebService/GetAllOrders" message="tns:IDSSWebService_GetAllOrders_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDSSWebService/GetAllOrdersResponse" message="tns:IDSSWebService_GetAllOrders_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserOrders">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDSSWebService/GetUserOrders" message="tns:IDSSWebService_GetUserOrders_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDSSWebService/GetUserOrdersResponse" message="tns:IDSSWebService_GetUserOrders_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderItems">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDSSWebService/GetOrderItems" message="tns:IDSSWebService_GetOrderItems_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDSSWebService/GetOrderItemsResponse" message="tns:IDSSWebService_GetOrderItems_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoryPerfomance">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDSSWebService/GetCategoryPerfomance" message="tns:IDSSWebService_GetCategoryPerfomance_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDSSWebService/GetCategoryPerfomanceResponse" message="tns:IDSSWebService_GetCategoryPerfomance_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWorstBuyer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDSSWebService/GetWorstBuyer" message="tns:IDSSWebService_GetWorstBuyer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDSSWebService/GetWorstBuyerResponse" message="tns:IDSSWebService_GetWorstBuyer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBestBuyer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDSSWebService/GetBestBuyer" message="tns:IDSSWebService_GetBestBuyer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDSSWebService/GetBestBuyerResponse" message="tns:IDSSWebService_GetBestBuyer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNumberOfSales">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDSSWebService/GetNumberOfSales" message="tns:IDSSWebService_GetNumberOfSales_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDSSWebService/GetNumberOfSalesResponse" message="tns:IDSSWebService_GetNumberOfSales_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SalesContribution">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDSSWebService/SalesContribution" message="tns:IDSSWebService_SalesContribution_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDSSWebService/SalesContributionResponse" message="tns:IDSSWebService_SalesContribution_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RevenuePerTransaction">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDSSWebService/RevenuePerTransaction" message="tns:IDSSWebService_RevenuePerTransaction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDSSWebService/RevenuePerTransactionResponse" message="tns:IDSSWebService_RevenuePerTransaction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRevenue">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDSSWebService/GetRevenue" message="tns:IDSSWebService_GetRevenue_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDSSWebService/GetRevenueResponse" message="tns:IDSSWebService_GetRevenue_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTotalOrders">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDSSWebService/GetTotalOrders" message="tns:IDSSWebService_GetTotalOrders_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDSSWebService/GetTotalOrdersResponse" message="tns:IDSSWebService_GetTotalOrders_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTotalUsers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDSSWebService/GetTotalUsers" message="tns:IDSSWebService_GetTotalUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDSSWebService/GetTotalUsersResponse" message="tns:IDSSWebService_GetTotalUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TopFiveSelling">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDSSWebService/TopFiveSelling" message="tns:IDSSWebService_TopFiveSelling_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDSSWebService/TopFiveSellingResponse" message="tns:IDSSWebService_TopFiveSelling_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SortByPriceAsc">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDSSWebService/SortByPriceAsc" message="tns:IDSSWebService_SortByPriceAsc_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDSSWebService/SortByPriceAscResponse" message="tns:IDSSWebService_SortByPriceAsc_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SortByPriceADesc">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDSSWebService/SortByPriceADesc" message="tns:IDSSWebService_SortByPriceADesc_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDSSWebService/SortByPriceADescResponse" message="tns:IDSSWebService_SortByPriceADesc_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SortByNameAZ">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDSSWebService/SortByNameAZ" message="tns:IDSSWebService_SortByNameAZ_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDSSWebService/SortByNameAZResponse" message="tns:IDSSWebService_SortByNameAZ_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SortByNameZA">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDSSWebService/SortByNameZA" message="tns:IDSSWebService_SortByNameZA_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDSSWebService/SortByNameZAResponse" message="tns:IDSSWebService_SortByNameZA_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AverageUsersPerDay">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDSSWebService/AverageUsersPerDay" message="tns:IDSSWebService_AverageUsersPerDay_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDSSWebService/AverageUsersPerDayResponse" message="tns:IDSSWebService_AverageUsersPerDay_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FilterOrders">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDSSWebService/FilterOrders" message="tns:IDSSWebService_FilterOrders_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDSSWebService/FilterOrdersResponse" message="tns:IDSSWebService_FilterOrders_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FilterRevenue">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDSSWebService/FilterRevenue" message="tns:IDSSWebService_FilterRevenue_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDSSWebService/FilterRevenueResponse" message="tns:IDSSWebService_FilterRevenue_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFilteredOrders">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDSSWebService/GetFilteredOrders" message="tns:IDSSWebService_GetFilteredOrders_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDSSWebService/GetFilteredOrdersResponse" message="tns:IDSSWebService_GetFilteredOrders_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddToWishList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDSSWebService/AddToWishList" message="tns:IDSSWebService_AddToWishList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDSSWebService/AddToWishListResponse" message="tns:IDSSWebService_AddToWishList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserWishlist">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDSSWebService/GetUserWishlist" message="tns:IDSSWebService_GetUserWishlist_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDSSWebService/GetUserWishlistResponse" message="tns:IDSSWebService_GetUserWishlist_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TopFiveMostWishedItems">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDSSWebService/TopFiveMostWishedItems" message="tns:IDSSWebService_TopFiveMostWishedItems_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDSSWebService/TopFiveMostWishedItemsResponse" message="tns:IDSSWebService_TopFiveMostWishedItems_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProspectiveBuyers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDSSWebService/GetProspectiveBuyers" message="tns:IDSSWebService_GetProspectiveBuyers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDSSWebService/GetProspectiveBuyersResponse" message="tns:IDSSWebService_GetProspectiveBuyers_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IDSSWebService" type="tns:IDSSWebService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetUser">
+      <soap:operation soapAction="http://tempuri.org/IDSSWebService/GetUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserByID">
+      <soap:operation soapAction="http://tempuri.org/IDSSWebService/GetUserByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllProducts">
+      <soap:operation soapAction="http://tempuri.org/IDSSWebService/GetAllProducts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProducts">
+      <soap:operation soapAction="http://tempuri.org/IDSSWebService/GetProducts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllUsers">
+      <soap:operation soapAction="http://tempuri.org/IDSSWebService/GetAllUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Search">
+      <soap:operation soapAction="http://tempuri.org/IDSSWebService/Search" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUser">
+      <soap:operation soapAction="http://tempuri.org/IDSSWebService/AddUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveUser">
+      <soap:operation soapAction="http://tempuri.org/IDSSWebService/RemoveUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DisableUser">
+      <soap:operation soapAction="http://tempuri.org/IDSSWebService/DisableUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnableUser">
+      <soap:operation soapAction="http://tempuri.org/IDSSWebService/EnableUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditUser">
+      <soap:operation soapAction="http://tempuri.org/IDSSWebService/EditUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddProduct">
+      <soap:operation soapAction="http://tempuri.org/IDSSWebService/AddProduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveProduct">
+      <soap:operation soapAction="http://tempuri.org/IDSSWebService/RemoveProduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditProduct">
+      <soap:operation soapAction="http://tempuri.org/IDSSWebService/EditProduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DisableProduct">
+      <soap:operation soapAction="http://tempuri.org/IDSSWebService/DisableProduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnableProduct">
+      <soap:operation soapAction="http://tempuri.org/IDSSWebService/EnableProduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProduct">
+      <soap:operation soapAction="http://tempuri.org/IDSSWebService/GetProduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostSellingProduct">
+      <soap:operation soapAction="http://tempuri.org/IDSSWebService/MostSellingProduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LeastSellingProduct">
+      <soap:operation soapAction="http://tempuri.org/IDSSWebService/LeastSellingProduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OverallMostSellingProduct">
+      <soap:operation soapAction="http://tempuri.org/IDSSWebService/OverallMostSellingProduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OverallLeastSellingProduct">
+      <soap:operation soapAction="http://tempuri.org/IDSSWebService/OverallLeastSellingProduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTax">
+      <soap:operation soapAction="http://tempuri.org/IDSSWebService/GetTax" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetTax">
+      <soap:operation soapAction="http://tempuri.org/IDSSWebService/SetTax" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Transact">
+      <soap:operation soapAction="http://tempuri.org/IDSSWebService/Transact" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeUserPassword">
+      <soap:operation soapAction="http://tempuri.org/IDSSWebService/ChangeUserPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPointsDiscount">
+      <soap:operation soapAction="http://tempuri.org/IDSSWebService/GetPointsDiscount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllOrders">
+      <soap:operation soapAction="http://tempuri.org/IDSSWebService/GetAllOrders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserOrders">
+      <soap:operation soapAction="http://tempuri.org/IDSSWebService/GetUserOrders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderItems">
+      <soap:operation soapAction="http://tempuri.org/IDSSWebService/GetOrderItems" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoryPerfomance">
+      <soap:operation soapAction="http://tempuri.org/IDSSWebService/GetCategoryPerfomance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWorstBuyer">
+      <soap:operation soapAction="http://tempuri.org/IDSSWebService/GetWorstBuyer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBestBuyer">
+      <soap:operation soapAction="http://tempuri.org/IDSSWebService/GetBestBuyer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNumberOfSales">
+      <soap:operation soapAction="http://tempuri.org/IDSSWebService/GetNumberOfSales" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SalesContribution">
+      <soap:operation soapAction="http://tempuri.org/IDSSWebService/SalesContribution" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RevenuePerTransaction">
+      <soap:operation soapAction="http://tempuri.org/IDSSWebService/RevenuePerTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRevenue">
+      <soap:operation soapAction="http://tempuri.org/IDSSWebService/GetRevenue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTotalOrders">
+      <soap:operation soapAction="http://tempuri.org/IDSSWebService/GetTotalOrders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTotalUsers">
+      <soap:operation soapAction="http://tempuri.org/IDSSWebService/GetTotalUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TopFiveSelling">
+      <soap:operation soapAction="http://tempuri.org/IDSSWebService/TopFiveSelling" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SortByPriceAsc">
+      <soap:operation soapAction="http://tempuri.org/IDSSWebService/SortByPriceAsc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SortByPriceADesc">
+      <soap:operation soapAction="http://tempuri.org/IDSSWebService/SortByPriceADesc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SortByNameAZ">
+      <soap:operation soapAction="http://tempuri.org/IDSSWebService/SortByNameAZ" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SortByNameZA">
+      <soap:operation soapAction="http://tempuri.org/IDSSWebService/SortByNameZA" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AverageUsersPerDay">
+      <soap:operation soapAction="http://tempuri.org/IDSSWebService/AverageUsersPerDay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FilterOrders">
+      <soap:operation soapAction="http://tempuri.org/IDSSWebService/FilterOrders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FilterRevenue">
+      <soap:operation soapAction="http://tempuri.org/IDSSWebService/FilterRevenue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFilteredOrders">
+      <soap:operation soapAction="http://tempuri.org/IDSSWebService/GetFilteredOrders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddToWishList">
+      <soap:operation soapAction="http://tempuri.org/IDSSWebService/AddToWishList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserWishlist">
+      <soap:operation soapAction="http://tempuri.org/IDSSWebService/GetUserWishlist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TopFiveMostWishedItems">
+      <soap:operation soapAction="http://tempuri.org/IDSSWebService/TopFiveMostWishedItems" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProspectiveBuyers">
+      <soap:operation soapAction="http://tempuri.org/IDSSWebService/GetProspectiveBuyers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DSSWebService">
+    <wsdl:port name="BasicHttpBinding_IDSSWebService" binding="tns:BasicHttpBinding_IDSSWebService">
+      <soap:address location="http://localhost:65458/DSSWebService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

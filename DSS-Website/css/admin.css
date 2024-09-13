@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway|Red+Hat+Text|Roboto|Source+Serif+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Asap&display=swap');
+* {
+    line-height: 1.7;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    background: rgba(255, 255, 255, 0);
+    scroll-behavior: smooth;
+}
+
+.menu-bar {
+    color: #fff;
+    width: 20%;
+    height: 100vh;
+    margin-top: 20px;
+    position: fixed;
+    float: left;
+    background: rgb(39, 133, 10);
+    padding-top: 100px;
+ 
+}
+.our-container {
+    width: 100%;
+}
+.menu-bar h2 {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.menu-bar .home-page img {
+    width: 100%;
+    height: 20%;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 4px 5px;
+}
+
+.menu ul li {
+    background: rgba(129, 214, 126, 0.767);
+    padding: 7px 10px;
+    border-radius: 6px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.fas {
+    font-size: 15px;
+    padding: 0 5px;
+}
+
+/* .heads {
+    /* box-shadow: 0 2px 3px rgba(110, 158, 141, 0.637); */
+    /* width: 550px;
+    margin: auto; 
+*/
+
+.heads h1 {
+    padding: 10px 5px;
+}
+
+.heads a {
+    display: inline;
+    position: relative;
+    right: -57px;
+}
+
+.data-bar {
+    width: 79%;
+    padding-top: 80px;
+    height: 100vh;
+    margin-left: 20vw;
+    float: right;
+    background: #fff;
+    text-align: "";
+}
+
+
+/* The styling for the tables that the admin and employee can get to see */
+
+.our-table {
+    border: none;
+    width: 90%;
+    margin: 0 auto;
+    padding: 5px 10px;
+    border-collapse: collapse;
+}
+
+.our-table thead {
+    background: rgb(39, 133, 10);
+    color: #fff;
+}
+
+.our-table thead tr th {
+    padding: 10px 10px !important;
+    font-size: 20px;
+}
+
+.our-table tbody tr td {
+    padding: 10px 10px;
+}
+
+.our-table tbody tr:nth-child(even) {
+    background: rgba(129, 214, 126, 0.767);
+}
+
+.our-productBtn {
+    text-align: right !important;
+    padding: 10px 12px;
+    color: #fff !important;
+    background: rgb(44, 138, 105) !important;
+}
+
+
+/* Adding The New Items...Products or Users */
+
+.input-product input[type="email"],
+.input-product input[type="text"],
+.input-user input[type="email"],
+.input-user input[type="text"] {
+    display: block;
+    padding: 8px;
+    width: 100%;
+    margin: 1px;
+    border-radius: 5px;
+    margin: 4px 0;
+    outline: none;
+    border: none;
+    border: 1.5px solid rgb(114, 237, 194);
+}
+
+.input-product label,
+.input-user label {
+    font-weight: 600;
+    text-align: left !important;
+}
+
+.input-product input[type="submit"],
+.input-user input[type="submit"] {
+    margin: 9px 0;
+    width: 100%;
+    border-radius: 5px;
+    background-color: rgb(44, 138, 105);
+    border: none;
+    color: #fff;
+    padding: 9px 5px;
+}
+
+.addUser,
+.addProduct {
+    padding: 15px 0px;
+    background: rgba(112, 170, 150, 0.192);
+    border-radius: 6px;
+}
+
+
+/* The edit, delete and diable link */
+
+.edit,
+.delete,
+.disable {
+    font-weight: lighter;
+    margin: 0 2px;
+}
+
+.delete {
+    color: red;
+    border: 1px solid red;
+    background: inherit;
+}
+
+.edit {
+    color: rgb(44, 138, 105);
+    border: 1px solid green;
+    ;
+}
+
+.disable {
+    border: 1px solid blue;
+    color: blue;
+}
+
+.delete:hover {
+    background: red;
+    color: #fff;
+}
+
+.disable:hover {
+    color: #fff;
+    background: blue;
+}
+
+.edit:hover {
+    color: #fff;
+    background: rgb(44, 138, 105);
+}
+
+.delete,
+.edit,
+.disable {
+    transition: all .6s ease-in;
+    padding: 0 2px;
+    border-radius: 3px;
+}
+
+
+/* This section is for everything/cards that is under the dashboard page. It is insane! */
+
+.dash-card {
+    padding: 10px 7px;
+    border-radius: 4px;
+    background: rgb(39, 133, 10);
+    color: #fff;
+    box-shadow: 1px .5px 3px 1px rgba(158, 255, 139, 0.856);
+}
+
+.dash-card hr {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.fa-money-bill-wave,
+.dash-card .fa-paste,
+.dash-card .fa-user,
+.dash-card .fa-users {
+    font-size: 20px;
+    color: #fff;
+}
+
+
+/* The graphs */
+
+#myGraph {
+    height: 60px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+/* The styling for the modals for adding the user or the products */
+
+.btn-add {
+    color: #fff;
+    background: rgb(39, 133, 10);
+    box-shadow: none;
+}
+
+.btn-add:focus {
+    box-shadow: none;
+}
+
+.btn-add:active {
+    box-shadow: 1px 3px 3px 2px rgba(53, 39, 33, 0.301);
+}
+
+.btn-add:hover {
+    color: #fff;
+}
+
+.input-add input[type="text"],
+.input-add input[type="number"],
+.input-add input[type="email"] {
+    padding: 8px;
+    width: 100%;
+    margin: 1px;
+    border-radius: 5px;
+    margin: 4px 0;
+    outline: none;
+    border: none;
+    border: 1.5px solid rgb(39, 133, 10);
+}
+
+.input-add label {
+    padding: 0 !important;
+    font-weight: lighter;
+    text-transform: capitalize;
+    display: inline;
+    font-size: 15px;
+    text-align: left !important;
+}
+
+.input-add select:active,
+.input-add select:focus,
+.input-add select {
+    outline: none;
+    border: 1.5px solid rgb(39, 133, 10);
+}
+
+.input-add option {
+    font-size: 15px;
+    font-weight: lighter;
+    text-transform: capitalize;
+}
+.buying-user{
+    margin: 0 10px;
+    width: 35vw;
+    color: black;
+    text-align: center;
+    border-width: 10px;;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    border-radius: 5px;
+    border: 1px solid rgba(170, 207, 165, 0.507);
+}
+.user-table ul {
+    list-style: none;
+    margin: 0;
+}
+
+.user-table ul li {
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+}
+
+.user-table {
+    height: 100%;
+}
+
+.user-table {
+    border: none;
+    width: 90%;
+    margin: 0 auto;
+    padding: 5px 10px;
+    border-collapse: collapse;
+}
+
+.user-table thead {
+    background: rgb(39, 133, 10);
+    color: #fff;
+}
+
+.user-table tbody tr td {
+    height: 5px;
+    padding: 3px;
+}
+
+.user-table tbody tr:nth-child(even) {
+    background: rgba(77, 255, 0, 0.295);
+}
+
+.transactions{
+    height: 59vh;
+    overflow-y: scroll;
+    scroll-margin: inherit;
+}
+
+
+/*The drop down menu*/
+.dropdowntype {
+    background: inherit;
+    padding: 0 7px;
+    outline: none;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    margin-left: 0px;
+}
+
+.dropdowntype .dropList, .invoices .dropList {
+    background: rgba(77, 255, 0, 0.295) !important;
+    color: #fff;
+    font-size: 15px;
+}
+.dash-card i {
+    margin-left: 10px;
+}
+.body-card h4, .body-card h5, .body-card p {
+    margin: 0 25px !important;
+}

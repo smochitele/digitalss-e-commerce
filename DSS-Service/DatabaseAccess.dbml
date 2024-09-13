@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DigitalSS_DB" Class="DatabaseAccessDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=(localdb)\v12.0;Initial Catalog=DigitalSS_DB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="DigitalSS_DBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.CommonType" Member="CommonTypes">
+    <Type Name="CommonType">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="Value" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[Order]" Member="Orders">
+    <Type Name="Order">
+      <Column Name="OrderID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NumItems" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="PaymentMethod" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="Delivery" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="AmountDue" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Association Name="Order_OrderProductJoin" Member="OrderProductJoins" ThisKey="OrderID" OtherKey="OrderID" Type="OrderProductJoin" />
+      <Association Name="User_Order" Member="User" ThisKey="UserID" OtherKey="UserID" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.OrderProductJoin" Member="OrderProductJoins">
+    <Type Name="OrderProductJoin">
+      <Column Name="OrderID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ProductID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Quantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Order_OrderProductJoin" Member="Order" ThisKey="OrderID" OtherKey="OrderID" Type="Order" IsForeignKey="true" />
+      <Association Name="Product_OrderProductJoin" Member="Product" ThisKey="ProductID" OtherKey="ProductID" Type="Product" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Product" Member="Products">
+    <Type Name="Product">
+      <Column Name="ProductID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProductName" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="Category" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Price" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Discount" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Quantity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="QuantityBought" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PrepationTime" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Picture" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Rating" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Healthiness" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Tags" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="NumberOfWishes" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Product_OrderProductJoin" Member="OrderProductJoins" ThisKey="ProductID" OtherKey="ProductID" Type="OrderProductJoin" />
+      <Association Name="Product_TransactionProductJoin" Member="TransactionProductJoins" ThisKey="ProductID" OtherKey="ProductID" Type="TransactionProductJoin" />
+      <Association Name="Product_WishlistProductJoin" Member="WishlistProductJoins" ThisKey="ProductID" OtherKey="ProductID" Type="WishlistProductJoin" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[Transaction]" Member="Transactions">
+    <Type Name="Transaction">
+      <Column Name="TransID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="Transaction_TransactionProductJoin" Member="TransactionProductJoins" ThisKey="TransID" OtherKey="TransID" Type="TransactionProductJoin" />
+      <Association Name="User_Transaction" Member="User" ThisKey="UserID" OtherKey="UserID" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TransactionProductJoin" Member="TransactionProductJoins">
+    <Type Name="TransactionProductJoin">
+      <Column Name="TransID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ProductID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Product_TransactionProductJoin" Member="Product" ThisKey="ProductID" OtherKey="ProductID" Type="Product" IsForeignKey="true" />
+      <Association Name="Transaction_TransactionProductJoin" Member="Transaction" ThisKey="TransID" OtherKey="TransID" Type="Transaction" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[User]" Member="Users">
+    <Type Name="User">
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="LastName" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="UserType" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="IsActive" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Points" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Credit" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="NumberOfTransactions" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="User_Order" Member="Orders" ThisKey="UserID" OtherKey="UserID" Type="Order" />
+      <Association Name="User_Transaction" Member="Transactions" ThisKey="UserID" OtherKey="UserID" Type="Transaction" />
+      <Association Name="User_Wishlist" Member="Wishlists" ThisKey="UserID" OtherKey="UserID" Type="Wishlist" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Wishlist" Member="Wishlists">
+    <Type Name="Wishlist">
+      <Column Name="WishlistID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Wishlist_WishlistProductJoin" Member="WishlistProductJoins" ThisKey="WishlistID" OtherKey="WishlistID" Type="WishlistProductJoin" />
+      <Association Name="User_Wishlist" Member="User" ThisKey="UserID" OtherKey="UserID" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.WishlistProductJoin" Member="WishlistProductJoins">
+    <Type Name="WishlistProductJoin">
+      <Column Name="WishlistID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ProductID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Product_WishlistProductJoin" Member="Product" ThisKey="ProductID" OtherKey="ProductID" Type="Product" IsForeignKey="true" />
+      <Association Name="Wishlist_WishlistProductJoin" Member="Wishlist" ThisKey="WishlistID" OtherKey="WishlistID" Type="Wishlist" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
